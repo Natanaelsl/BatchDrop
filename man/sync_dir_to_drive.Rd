@@ -8,6 +8,7 @@ sync_dir_to_drive(
   pasta_local,
   id_pasta_raiz_drive,
   overwrite = TRUE,
+  skip_existing = TRUE,
   verbose = TRUE
 )
 }
@@ -16,7 +17,9 @@ sync_dir_to_drive(
 
 \item{id_pasta_raiz_drive}{Caractere. ID da pasta raiz no Google Drive.}
 
-\item{overwrite}{Lógico. Se \code{TRUE} (padrão), substitui arquivos no Drive com o mesmo nome.}
+\item{overwrite}{Lógico. Se \code{TRUE}, substitui arquivos no Drive se eles forem enviados.}
+
+\item{skip_existing}{Lógico. Se \code{TRUE} (padrão), pula arquivos que já existem no Drive, economizando tempo de upload.}
 
 \item{verbose}{Lógico. Se \code{TRUE} (padrão), exibe a barra de progresso e mensagens.}
 }
